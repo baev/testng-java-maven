@@ -2,6 +2,7 @@ package com.example.testng;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import org.testng.SkipException;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -9,11 +10,20 @@ public class StepTest {
 
     private static final String GLOBAL_PARAMETER = "global value";
 
-    @Ignore("not needed")
+    @Ignore
     public void ignoredTest() {
     }
 
     @Test(enabled = false)
+    public void disabledTest() {
+    }
+
+    @Test
+    public void skippedTest() {
+        throw new SkipException("mark test as skipped");
+    }
+
+    @Test
     public void annotatedStepTest() {
         annotatedStep("local value");
     }

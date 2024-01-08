@@ -12,4 +12,4 @@
 
 ---
 
-The generated report is available here: [https://allure-examples.github.io/testng-java-maven](https://allure-examples.github.io/testng-java-maven/)
+The generated report is available here: [https://baev.github.io/testng-java-maven](https://baev.github.io/testng-java-maven/)
